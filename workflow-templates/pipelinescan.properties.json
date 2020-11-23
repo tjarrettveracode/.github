@@ -1,0 +1,19 @@
+{
+    "name": "Pipeline Scan",
+    "description": "Pipeline Scan workflow template for applications that use zip file packaging",
+    "iconName": "veracode",
+    "categories": [
+        "Python",
+        "PHP",
+        "JavaScript",
+        "TypeScript",
+        "Classic ASP",
+        "HTML",
+        "HTML+Django",
+        "HTML+PHP",
+        "JavaScript+ERB",
+        "PLSQL",
+        "Perl",
+        "VBScript"
+    ]
+}
