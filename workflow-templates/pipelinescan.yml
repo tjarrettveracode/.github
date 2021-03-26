@@ -22,7 +22,7 @@ jobs:
         
   # zip the project and move it to a staging directory
     - name: Zip Project
-      run: zip -R project.zip '*.py' '*.js' '*.php' '*.ts' '*.html' '*.htm' '*.json' 'requirements.txt' '*.lock'
+      run: zip -R project.zip '*.py' '*.html' '*.htm' '*.js' '*.php' 'requirements.txt' '*.json' '*.lock' '*.ts' '*.pl' '*.pm' '*.plx' '*.pl5' '*.cgi' '*.go' '*.sum' '*.mod'
       env:
         build-name: project.zip
       
