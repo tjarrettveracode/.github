@@ -1,4 +1,6 @@
-# This is a basic workflow to help you get started with Actions
+# Veracode Policy Scan workflow. Requires the following secrets:
+# VERACODE_API_ID - https://help.veracode.com/r/t_create_api_creds
+# VERACODE_API_KEY - https://help.veracode.com/r/t_create_api_creds
 
 name: Veracode Policy Scan
 
