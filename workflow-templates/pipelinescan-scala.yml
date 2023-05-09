@@ -45,6 +45,14 @@ jobs:
   pipeline-scan:
     needs: build
     runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      actions: read
+      contents: read
+      pull-requests: read
+      security-events: write
+
     container: 
       image: veracode/pipeline-scan:latest
       options: --user root # our normal luser doesn't have privs to write to github directories
