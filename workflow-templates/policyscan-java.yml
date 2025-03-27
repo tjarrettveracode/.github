@@ -28,17 +28,17 @@ jobs:
         id: check_maven
         uses: andstor/file-existence-action@v1
         with:
-          files: "pom.xml"
+          files: "*/pom.xml"
 
       - name: Check for Gradle build
         id: check_gradle
         uses: andstor/file-existence-action@v1
         with:
-          files: "build.gradle"
+          files: "*/build.gradle"
 
       - name: Build application with mvn
         if: steps.check_maven.outputs.files_exists == 'true'
-        run: mvn -B package --file pom.xml
+        run: mvn -B package --file app/pom.xml
 
       - name: Build application with gradle
         if: steps.check_gradle.outputs.files_exists == 'true'
