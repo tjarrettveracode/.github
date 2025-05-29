@@ -44,7 +44,7 @@ jobs:
         if: steps.check_gradle.outputs.files_exists == 'true'
         run: gradle clean build
 
-      - uses: actions/upload-artifact@v3 # Copy files from repository to docker container so the next uploadandscan action can access them.
+      - uses: actions/upload-artifact@v4 # Copy files from repository to docker container so the next uploadandscan action can access them.
         with:
           path: '**/*.[jw]ar' # Wildcards can be used to filter the files copied into the container. See: https://github.com/actions/upload-artifact
  

@@ -34,7 +34,7 @@ jobs:
           build-name: project.zip      
         
       - name: Archive package
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: CodePackage
           path: project.zip
