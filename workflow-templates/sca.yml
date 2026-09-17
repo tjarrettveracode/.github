@@ -33,7 +33,9 @@ jobs:
         SRCCLR_NO_BREAKING_UPDATES: true
         SRCCLR_IGNORE_CLOSED_PRS: true
         SRCCLR_SCM_URL: https://github.com/$GITHUB_REPOSITORY
-        EXTRA_ARGS: '--update-advisor --pull-request --unmatched'
+        VERACODE_API_KEY_ID: ${{ secrets.VERACODE_API_ID}}
+        VERACODE_API_KEY_SECRET: ${{ secrets.VERACODE_API_KEY }}
+        EXTRA_ARGS: '--update-advisor --pull-request --unmatched --appname="${{ github.event.repository.name }}"'
       run: |
         git config --global user.email "${{ secrets.USER_EMAIL }}"
         git config --global user.name "${{ secrets.USER_NAME }}"
